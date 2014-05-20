@@ -66,9 +66,11 @@
         
         _labelContainerView = [[CustomView alloc] init];
         self.labelContainerView.frame = CGRectMake(0, 0, self.contentSize.width, self.contentSize.height);
-        
+
         [_labelContainerView setBackgroundColor:[UIColor redColor]];
         [self addSubview:self.labelContainerView];
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
+        [self addGestureRecognizer:singleTap];
 
         [self.labelContainerView setUserInteractionEnabled:NO];
         [self setBackgroundColor:[UIColor greenColor]];
@@ -120,6 +122,14 @@
     [self recenterIfNecessary];
  
     [_labelContainerView process:[self bounds]];
+}
+
+
+
+#pragma mark -
+-(void)singleTap:(UIGestureRecognizer *)gesture
+{
+    NSLog(@"%s",__func__);
 }
 
 

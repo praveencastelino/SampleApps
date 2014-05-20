@@ -29,7 +29,7 @@
         // Initialization code
         _contentOffsetY = 0;
         _contentOffsetX = 0;
-        //self.maximumContentOffset = CGPointMake((HEIGHT + SPACING) * ITEMS, (HEIGHT + SPACING) * ITEMS);
+        
     }
     return self;
 }
